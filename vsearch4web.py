@@ -33,7 +33,7 @@ def entry_page() -> 'str':
 
 
 @app.route('/viewlog')
-def view_the_log() -> 'html':
+def view_the_log() -> 'str':
     contents = []
     with open('vsearch.log') as log:
          for line in log:
