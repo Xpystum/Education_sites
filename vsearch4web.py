@@ -8,6 +8,7 @@ from ua_parser import user_agent_parser
 
 app = Flask(__name__)
 
+#Функции
 def log_request_text(req, res: str) -> None:
     with open('vsearch.log', 'a') as log:
          req_user_browser = user_agent_parser.Parse(req.user_agent.string)['user_agent']['family']
@@ -18,21 +19,23 @@ def log_request(req, res: str) -> None:  # записать в лог (рабо�
     try:
         # Подключаемся к Mysql с помощью драйвера
         connection = pymysql.connect(
-        host=host,
-        port=3306,
-        user=user,
-        password=password,
-        database=db_name,
+        host = host,
+        port = 3306,
+        user = user,
+        password = password,
+        database = db_name,
         # это нужно для того, чтобы получить результат в виде словаря, где ключами будут названия колонок.
-        cursorclass=pymysql.cursors.DictCursor)
+        cursorclass = pymysql.cursors.DictCursor)
         print("Successfully connected")
         print('"#' * 20)
 
 
+    #Сделать шаблонную функцию в функции
+
         try:
             with connection.cursor() as cursor: #автоматически закрое соединение с cursor
                 _SQL = "insert into log (`phrase`, `letters`, `ip`, `browser_string`, `result`) VALUES (%s, %s, %s, %s, %s)"
-                req_user_browser = user_agent_parser.Parse(req.user_agent.string)['user_agent']['family']
+                print(type(req_user_browser = user_agent_parser.Parse(req.user_agent.string)['user_agent']['family']))
                 cursor.execute(_SQL, (req.form['phrase'],
                                       req.form['letters'],
                                       req.remote_addr,
@@ -54,7 +57,7 @@ def log_request(req, res: str) -> None:  # записать в лог (рабо�
     # Старая запись в лог
     # with open('vsearch.log', 'a') as log:
     #      print(req.form, req.remote_addr, req.user_agent, res, file=log, sep = "|")
-
+#Конец блоков Функций
 
 @app.route('/search4', methods=['POST'])
 def do_search() -> str:
