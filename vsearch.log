@@ -1,9 +1,72 @@
-ImmutableMultiDict([('phrase', 'rtdhergfer'), ('letters', '234e213freg')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36|{'e', 'r', 'g', 'f'}
-ImmutableMultiDict([('phrase', 'erg'), ('letters', 'wergwef')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36|{'e', 'r', 'g'}
-ImmutableMultiDict([('phrase', 'ergerf'), ('letters', 'rferg')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36|{'r', 'g', 'e', 'f'}
-ImmutableMultiDict([('phrase', 'gerfwe'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36|{'e'}
-ImmutableMultiDict([('phrase', 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ'), ('letters', 'пїЅпїЅпїЅпїЅ')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36|{'пїЅ', 'пїЅ', 'пїЅ', 'пїЅ'}
-ImmutableMultiDict([('phrase', 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ'), ('letters', 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ')])|127.0.0.1|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36|{'пїЅ', 'пїЅ', 'пїЅ', 'пїЅ', 'пїЅ'}
-ImmutableMultiDict([('phrase', 'esrferg'), ('letters', 'gerf')])|127.0.0.1|Chrome|{'e', 'g', 'r', 'f'}
-ImmutableMultiDict([('phrase', 'fergbertb'), ('letters', 'etgergf')])|127.0.0.1|Chrome|{'t', 'g', 'r', 'f', 'e'}
-ImmutableMultiDict([('phrase', 'пїЅпїЅпїЅпїЅпїЅ'), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', 'ува'), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', '1'), ('letters', '1')])|127.0.0.1|Chrome|{'1'}
+ImmutableMultiDict([('phrase', '1'), ('letters', '2')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', '12'), ('letters', '12')])|127.0.0.1|Chrome|{'1', '2'}
+ImmutableMultiDict([('phrase', '13'), ('letters', '13')])|127.0.0.1|Chrome|{'3', '1'}
+ImmutableMultiDict([('phrase', '3'), ('letters', '4')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', '4'), ('letters', '4')])|127.0.0.1|Chrome|{'4'}
+ImmutableMultiDict([('phrase', '67'), ('letters', '67')])|127.0.0.1|Chrome|{'7', '6'}
+ImmutableMultiDict([('phrase', '5'), ('letters', '5')])|127.0.0.1|Chrome|{'5'}
+ImmutableMultiDict([('phrase', '567'), ('letters', '567')])|127.0.0.1|Chrome|{'6', '5', '7'}
+ImmutableMultiDict([('phrase', '43'), ('letters', '2345')])|127.0.0.1|Chrome|{'4', '3'}
+ImmutableMultiDict([('phrase', '345'), ('letters', '45623')])|127.0.0.1|Chrome|{'4', '3', '5'}
+ImmutableMultiDict([('phrase', 'werf'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'ergb'), ('letters', 'erf')])|127.0.0.1|Chrome|{'e', 'r'}
+ImmutableMultiDict([('phrase', 'gef'), ('letters', 'wewg')])|127.0.0.1|Chrome|{'g', 'e'}
+ImmutableMultiDict([('phrase', 'etertg'), ('letters', 'rgfewrg')])|127.0.0.1|Chrome|{'e', 'g', 'r'}
+ImmutableMultiDict([('phrase', '56'), ('letters', '56')])|127.0.0.1|Chrome|{'6', '5'}
+ImmutableMultiDict([('phrase', 'wegf4'), ('letters', 'erg4')])|127.0.0.1|Chrome|{'e', '4', 'g'}
+ImmutableMultiDict([('phrase', '87'), ('letters', '87')])|127.0.0.1|Chrome|{'8', '7'}
+ImmutableMultiDict([('phrase', '5r'), ('letters', '54r')])|127.0.0.1|Chrome|{'r', '5'}
+ImmutableMultiDict([('phrase', '3'), ('letters', '3')])|127.0.0.1|Chrome|{'3'}
+ImmutableMultiDict([('phrase', '3'), ('letters', '3')])|127.0.0.1|Chrome|{'3'}
+ImmutableMultiDict([('phrase', 'ef'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', ''), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', ''), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', ''), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', ''), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', '89'), ('letters', '89')])|127.0.0.1|Chrome|{'9', '8'}
+ImmutableMultiDict([('phrase', 'reg'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'erthger45'), ('letters', 'aeiou45')])|127.0.0.1|Chrome|{'4', '5', 'e'}
+ImmutableMultiDict([('phrase', 'ertfhg'), ('letters', 'aeiou4')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'rethrt'), ('letters', 'aeiou54')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'ertgerr'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'reth'), ('letters', 'aeiou4')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'erthertg'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'fgdhrgher'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'erth'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'erg'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'erthrt43r'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'gdf'), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', ''), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', 'dfgfng'), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', 'увкп'), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', 'erger'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', '65'), ('letters', '65')])|127.0.0.1|Chrome|{'5', '6'}
+ImmutableMultiDict([('phrase', 'edrfhrgnr'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'rtnjhthnf'), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', 'dfgbw4er'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', ''), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', 'fgb'), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', 'fgbert'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', ''), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', ''), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', 'fgdnbrtyh'), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', 'dfbrthetr'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'dfbrthetr'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'rgyjntrygre'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', ''), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', 'rfghberf'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'gergf'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'retdfg'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'efdg'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'rtyjhrggrnb'), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', 'etrghrth'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'ertg'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'thyjmnefg'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', ''), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', ''), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', ''), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', ''), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()
+ImmutableMultiDict([('phrase', 'ewrgewrgewrgewrgewrgewrgewrgewrgewrgewrgewrgewrgewrgewrgewrgewrgewrgewrg'), ('letters', 'aeiou')])|127.0.0.1|Chrome|{'e'}
+ImmutableMultiDict([('phrase', 'увкампу'), ('letters', 'aeiou')])|127.0.0.1|Chrome|set()

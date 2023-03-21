@@ -8,6 +8,10 @@ table{
     padding: 50px;
 }
 
+ td{
+    border: 1px solid black;
+ }
+
 .before_form{
     margin: 0 auto;
 }
