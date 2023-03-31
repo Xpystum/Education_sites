@@ -1,15 +1,28 @@
-from flask import Flask, render_template, request  # requst and render html pages
+from flask import Flask, render_template, request, session  # requst and render html pages
 from vsearch import search_4_letters  # my func - using my func in project
 # Экранирование что бы браузер не воспринимал текст как теги например "< or >"
 from flask import escape
 from ua_parser import user_agent_parser
 from db.DBcm import DbConfing, UseDatabase
+import os #Для рамнонизации секретного ключа
+from session.checker import checkk_logged_in
 
 
 
 app = Flask(__name__)
+app.config.from_object(__name__)
 
-#Функции
+app.config.update(
+    SECRET_KEY = os.urandom(24)
+)
+
+
+
+app.secret_key = app.config['SECRET_KEY'];
+
+
+#region Функции Логирования и работы с бд
+
 def log_request_text(req, res: str) -> None:
     with open('vsearch.log', 'a') as log:
          req_user_browser = user_agent_parser.Parse(req.user_agent.string)['user_agent']['family']
@@ -19,7 +32,7 @@ def log_request(req, res: str) -> None:  # Работа с Базой данны
 
     app.config['DbConfing'] = DbConfing("127.0.0.1", "root", 3306 ,"1911" , "vsearchlogdb") # поместили данные о подключении в объект
     #Для гибкости лучше использовать паттерн абстрактная фабрика (Что бы мы могли менять субд не переписывая наши объекты)
-    
+   
 
     try:
            
@@ -39,6 +52,7 @@ def log_request(req, res: str) -> None:  # Работа с Базой данны
     except Exception as ex:  # Ловим ошибку при покдлючении к бд или при работе
         print("Connection refused Date Base or inside the context manager `with` ")
         print(ex)
+#endregion
 
 
 
@@ -67,8 +81,8 @@ def entry_page() -> 'str':
     return render_template('entry.html',
                            the_title='Welcome to search4letterson the web')
 
-
 @app.route('/viewlog')
+@checkk_logged_in
 def view_the_log() -> 'str':
 
     with UseDatabase(app.config['DbConfing']) as cursor:
@@ -78,9 +92,9 @@ def view_the_log() -> 'str':
         cursor.execute(_SQL)
         result = cursor.fetchall() #возвращает данные в зависимости от запроса (в данном примере словарь)
 
-        lits_result = [] 
+        lits_result = []
         for a in result:
-            lits_result.append(escape(list(a.values()))) #нужно для того т.к fetchall() - теперь возвращает словарь
+            lits_result.append(list(a.values())) #нужно для того т.к fetchall() - теперь возвращает словарь
             
 
     titles = ('Phrase','Letters', 'Remote_addr', 'User_agent', 'Result',)
@@ -89,7 +103,19 @@ def view_the_log() -> 'str':
                            the_row_titles=titles,
                            the_data = lits_result,)
 
-         
+@app.route('/login')
+def do_login() -> str:
+    session['logged_in'] = True
+    return 'You are now logged in.'
+
+@app.route('/logout')
+def do_logout() -> str:
+    session.pop('logged_in')
+    return 'You are now logged out.'
+
+
+
+app.secret_key = app.config['SECRET_KEY'];
 
 if __name__ == '__main__':
-    app.run(debug=True)
+     app.run(debug=True)
